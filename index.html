@@ -6,13 +6,112 @@
 <meta name="description" content="Portfólio de Eduardo Soldi Junior - Profissional de TI">
     <title>SoldiTech | Portfólio</title>
 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="assets/css/style.css">
 
     <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-    
-    <h1>Olá, mundo! SoldiTech online.</h1>
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#" class="nav-logo">Soldi<span class="highlight">Tech</span>.</a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Projetos</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="home section" id="home">
+            <div class="home-container grid">
+                <div class="home-data">
+                    <span class="home-greeting">Olá, eu sou</span>
+                    <h1 class="home-name">Eduardo Soldi</h1>
+                    <h3 class="home-role">Analista de Suporte & Desenvolvedor</h3>
+                    <p class="home-description">
+                        Unindo a estabilidade da Infraestrutura com a inovação do Desenvolvimento Web.
+                        Criador do <b>SoldiTech</b> e focado em soluções escaláveis.
+                    </p>
+                    
+                    <div class="home-social">
+                        <a href="https://www.linkedin.com/in/eduardosoldi" target="_blank" class="home-social-icon">
+                            <i class='bx bxl-linkedin'></i>
+                        </a>
+                        <a href="https://github.com/EduardoSSjr" target="_blank" class="home-social-icon"> <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="mailto:eduardosjr06@gmail.com" class="home-social-icon">
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                    </div>
+
+                    <div class="home-buttons">
+                        <a href="#portfolio" class="button button-primary">Ver Projetos</a>
+                        <a href="#contact" class="button button-outline">Contato</a>
+                    </div>
+                </div>
+
+                <div class="home-img">
+                    <div class="img-placeholder"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <h2 class="section-title">Sobre Mim</h2>
+            <span class="section-subtitle">Minha trajetória profissional</span>
+
+            <div class="about-container grid">
+                <div class="about-img">
+                    <div class="img-placeholder" style="border-radius: 1rem;"></div>
+                </div>
+
+                <div class="about-data">
+                    <p class="about-description">
+                        Sou Tecnólogo em Análise e Desenvolvimento de Sistemas (FATEC) com vivência prática em ambientes corporativos. 
+                        <br><br>
+                        Minha jornada começou no suporte técnico (N1), onde desenvolvi habilidades sólidas em <strong>Windows Server, Office 365 e Virtualização</strong>. 
+                        Hoje, expandi meu foco para o desenvolvimento de software, criando soluções que integram <strong>banco de dados SQL</strong> e aplicações Web modernas.
+                        <br><br>
+                        No canal <strong>SoldiTech</strong>, compartilho essa paixão traduzindo "TI para todos".
+                    </p>
+
+                    <div class="about-info">
+                        <div>
+                            <span class="about-info-title">03+</span>
+                            <span class="about-info-name">Anos de<br>Experiência</span>
+                        </div>
+                        <div>
+                            <span class="about-info-title">10+</span>
+                            <span class="about-info-name">Projetos<br>Acadêmicos</span>
+                        </div>
+                        <div>
+                            <span class="about-info-title">N1</span>
+                            <span class="about-info-name">Suporte<br>Especializado</span>
+                        </div>
+                    </div>
+
+                    <div class="about-buttons">
+                        <a href="#" class="button button-primary">
+                            Baixar CV <i class='bx bx-download'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
