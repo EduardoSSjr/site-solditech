@@ -1,0 +1,45 @@
+/* =========================================
+   1. Variáveis (Design System)
+   ========================================= */
+:root {
+    /* Paleta de Cores SoldiTech */
+    --color-pink: #FF00AD;
+    --color-purple: #8400C0;
+    --color-green: #17E1BC;
+    --color-blue: #0E186F;
+    
+    /* Cores de Base (Fundo e Texto) */
+    --bg-color: #0a0a0a;      /* Fundo quase preto (Moderno/Tech) */
+    --text-color: #f0f0f0;    /* Texto quase branco (Melhor contraste) */
+    --surface-color: #1a1a1a; /* Cor para cards e seções secundárias */
+
+    /* Tipografia (Vamos usar fontes de sistema por enquanto para performance) */
+    --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* =========================================
+   2. Reset CSS (Limpeza)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Essencial: mantem o tamanho dos elementos sob controle */
+}
+
+/* =========================================
+   3. Estilos Globais
+   ========================================= */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6; /* Leitura agradável */
+    overflow-x: hidden; /* Evita rolagem lateral indesejada */
+}
+
+/* Link temporário para testar a cor */
+h1 {
+    color: var(--color-pink);
+    text-align: center;
+    margin-top: 20vh;
+}
