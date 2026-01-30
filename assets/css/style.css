@@ -359,3 +359,169 @@ h1 {
         column-gap: 3rem;
     }
 }
+
+/* =========================================
+   10. Contact Section
+   ========================================= */
+.contact-container {
+    gap: 2rem;
+}
+
+.contact-content {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-icon-box {
+    font-size: 2rem;
+    color: var(--color-pink);
+    margin-bottom: 1rem;
+}
+
+.contact-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info {
+    display: block;
+    margin-bottom: 1.5rem;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+/* Responsividade Contato */
+@media screen and (min-width: 768px) {
+    .contact-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas lado a lado */
+    }
+}
+
+/* =========================================
+   11. Footer
+   ========================================= */
+.footer {
+    background-color: var(--surface-color);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.footer-title {
+    color: var(--color-pink);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-list {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: .3s;
+}
+
+.footer-link:hover {
+    color: var(--color-green);
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social-link {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    transition: .3s;
+    background-color: var(--bg-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+}
+
+.footer-social-link:hover {
+    background-color: var(--color-pink);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+/* =========================================
+   12. Responsividade Mobile (Menu)
+   ========================================= */
+
+/* Apenas para telas menores que 768px (Celulares/Tablets) */
+@media screen and (max-width: 767px) {
+    .nav-menu {
+        position: fixed;
+        bottom: -100%; /* Escondido lá embaixo */
+        left: 0;
+        width: 100%;
+        background-color: var(--surface-color);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+        z-index: 1000;
+    }
+    
+    /* Classe ativada pelo JS */
+    .show-menu {
+        bottom: 0; /* Sobe para a tela */
+    }
+
+    .nav-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .nav-toggle {
+        display: block; /* Mostra o ícone hambúrguer */
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-color);
+    }
+    
+    /* Vamos desenhar o ícone de menu com CSS ou usar um ícone boxicon */
+    .nav-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--text-color);
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+}
