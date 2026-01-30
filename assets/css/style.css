@@ -471,57 +471,56 @@ h1 {
 }
 
 /* =========================================
-   12. Responsividade Mobile (Menu)
+   12. Responsividade Mobile (Menu Novo)
    ========================================= */
 
-/* Apenas para telas menores que 768px (Celulares/Tablets) */
 @media screen and (max-width: 767px) {
     .nav-menu {
         position: fixed;
-        bottom: -100%; /* Escondido lá embaixo */
+        top: -100%; /* Escondido acima da tela */
         left: 0;
         width: 100%;
-        background-color: var(--surface-color);
-        padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 -1px 4px rgba(0,0,0,.15);
-        border-radius: 1.5rem 1.5rem 0 0;
-        transition: .3s;
-        z-index: 1000;
+        background-color: var(--surface-color); /* Fundo cinza escuro */
+        padding: 4rem 0 3rem; /* Espaçamento interno */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Sombra suave embaixo */
+        transition: top 0.4s; /* Animação suave de descida */
+        border-radius: 0 0 1rem 1rem; /* Arredondado só nas pontas de baixo */
+        z-index: 99; /* Fica abaixo do header (que é z-index 100) */
+        overflow: hidden;
     }
     
-    /* Classe ativada pelo JS */
+    /* Quando o JS adicionar essa classe, o menu desce */
     .show-menu {
-        bottom: 0; /* Sobe para a tela */
+        top: 3.5rem; /* Exatamente a altura do Header */
     }
 
     .nav-list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centraliza o texto */
+        row-gap: 2.5rem; /* Espaço entre os links */
     }
     
     .nav-link {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         font-weight: 500;
+        color: var(--text-color);
+        transition: 0.3s;
+    }
+
+    .nav-link:hover {
+        color: var(--color-pink);
     }
 
     .nav-toggle {
-        display: block; /* Mostra o ícone hambúrguer */
-        font-size: 1.5rem;
+        display: flex;
+        font-size: 1.8rem; /* Tamanho do ícone */
         cursor: pointer;
         color: var(--text-color);
+        transition: .3s;
     }
     
-    /* Vamos desenhar o ícone de menu com CSS ou usar um ícone boxicon */
-    .nav-toggle span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: var(--text-color);
-        margin: 5px 0;
-        transition: 0.3s;
+    .nav-toggle:hover {
+        color: var(--color-pink);
     }
 }
