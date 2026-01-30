@@ -283,3 +283,79 @@ h1 {
         justify-self: center;
     }
 }
+
+/* =========================================
+   8. Skills Section
+   ========================================= */
+.skills-container {
+    row-gap: 2rem;
+}
+
+.skills-content {
+    background-color: var(--surface-color);
+    padding: 2rem 1.5rem; /* altere aqui se ficar muito colado */
+    border-radius: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Borda sutil */
+    transition: .3s;
+}
+
+.skills-content:hover {
+    border-color: var(--color-purple); /* Brilho roxo ao passar o mouse */
+    box-shadow: 0 4px 20px rgba(132, 0, 192, 0.15);
+}
+
+.skills-title {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-green); /* Destaque no título do card */
+}
+
+.skills-box {
+    display: flex;
+    justify-content: center;
+    column-gap: 2.5rem; /* Espaço entre as duas colunas internas */
+}
+
+.skills-group {
+    display: grid;
+    align-content: flex-start;
+    row-gap: 1rem;
+}
+
+.skills-data {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.skills-data i {
+    font-size: 1rem;
+    color: var(--color-pink);
+    margin-top: 4px; /* Alinhar ícone com texto */
+}
+
+.skills-name {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.skills-level {
+    font-size: 0.75rem;
+    color: #888; /* Cinza para o subtítulo */
+}
+
+/* Responsividade Skills */
+@media screen and (min-width: 576px) {
+    .skills-container {
+        grid-template-columns: 350px; /* Centraliza um card maior se for tablet pequeno */
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 350px); /* Dois cards lado a lado no PC */
+        column-gap: 3rem;
+    }
+}
